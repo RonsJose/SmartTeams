@@ -11,21 +11,20 @@
     <div id="Wrapper">
         <div id="Background">
             <div id="Nav">
-
                 <img src="https://www.freeiconspng.com/uploads/building-icon-25.png">
                 <p>Corporations</p>
-
             </div>
+
             <div id="menu">
 
                 <div id="Home">
-                    <a href="">
+                    <a href="{{ url_for('home') }}" target="_self">
                          Home
                     </a>
                 </div>
                     
                 <div id="Selection">
-                    <a href="">
+                    <a href="{{ url_for('applications') }}" target="_self">
                         Apps
                     </a>
                 </div>
@@ -45,8 +44,8 @@
             </div>  
 
             <div id="title">
-                <h1>Corporations Hub</h1>
-                <a href="" target="_self">
+                <h1>Corporations Central</h1>
+                <a href="{{ url_for('applications') }}" target="_self">
                     <button id="Transfer_button">Learn more</button>
                 </a>
             </div>
