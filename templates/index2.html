@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="{{url_for('static', filename='styles/style2.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="background">
+            <div id="Nav">
+                <div id="Logo">
+                    <img src="https://www.freeiconspng.com/uploads/building-icon-25.png">
+                    <p>Corporations</p>
+                </div>
+
+                <div id="menu">
+
+                    <div id="Home">
+                        <a href="{{ url_for('home') }}" target="_self">
+                            Home
+                        </a>
+                    </div>
+
+                    <div id="Selection">
+                        <a href="{{ url_for('applications') }}" target="_self">
+                            Apps
+                        </a>
+                    </div>
+
+                    <div id="About">
+                        <a href="">
+                            About
+                        </a>
+                    </div>
+
+                    <div id="Support">
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Question_mark_white.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="title">
+                <h1>Applications</h1>
+            </div>
+
+            <div id="Container">
+                <div class="application application-1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png">
+                    <p>Google</p>
+                    <p>Google is  a multiple billion dollar company</p>
+                </div>
+                <div class="application application-2">
+                    <p>App 2</p>
+                </div>
+                <div class="application application-3">
+                    <p>App 3</p>
+                </div>
+                <div class="application application-4">
+                    <p>App 4</p>
+                </div>
+                <div class="application application-5">
+                    <p>App 5</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
