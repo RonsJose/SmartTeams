@@ -1,16 +1,31 @@
 from tetris_color import Color
 import pygame
+from tetris_position import Position
 
 class Block:
     def __init__(self, id):
         self.id = id
         self.cells = {}
         self.cell_size = 30
+        self.row_offset = 0
+        self.column_offset = 0
         self.rotation_state = 0
         self.color = Color.get_cell_colors()
 
-    def draw(self, screen):
+    def move(self, rows, columns):
+        self.row_offset += rows
+        self.column_offset += columns
+
+    def get_cell_possitions(self):
         tiles = self.cells[self.rotation_state]
+        moved_tiles = []
+        for position in tiles:
+            position = Position(position.row + self.row_offset, position.column + self.column_offset)  
+            moved_tiles.append(position)
+        return moved_tiles      
+
+    def draw(self, screen):
+        tiles = self.get_cell_possitions()
         for tile in tiles:
             tile_rect = pygame.Rect(tile.column * self.cell_size + 1, tile.row * self.cell_size,
             self.cell_size -1, self.cell_size -1)
