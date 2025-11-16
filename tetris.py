@@ -1,10 +1,18 @@
 import pygame, sys
 from tetris_game import Game
+from tetris_color import Color
 
 pygame.init()
-dark_blue = (44, 44, 127)
 
-screen = pygame.display.set_mode((300, 600)) #display setup
+title_font = pygame.font.Font(None, 40)
+score_surface = title_font.render("Score", True, Color.white)
+next_surface = title_font.render("Next", True, Color.white)
+game_over_surface = title_font.render("GAME OVER", True, Color.white)
+
+score_rect = pygame.Rect(320, 55, 170, 60)
+next_rect = pygame.Rect(320, 215, 170, 180)
+
+screen = pygame.display.set_mode((500, 620)) #display setup
 pygame.display.set_caption("Python Tetris")
 
 clock = pygame.time.Clock()
@@ -12,7 +20,7 @@ clock = pygame.time.Clock()
 game = Game()
 
 GAME_UPDATE = pygame.USEREVENT
-pygame.time.set_timer(GAME_UPDATE, 20)
+pygame.time.set_timer(GAME_UPDATE, 200)
 
 while True: #game loop
     for event in pygame.event.get():
@@ -34,7 +42,15 @@ while True: #game loop
         if event.type == GAME_UPDATE and game.game_over == False:
             game.move_down()
     
-    screen.fill(dark_blue) #drawing
+    screen.fill(Color.dark_blue) #drawing
+    screen.blit(score_surface, (365, 20, 50, 50))
+    screen.blit(next_surface, (375, 180, 50, 50))
+
+    if game.game_over == True:
+        screen.blit(game_over_surface, (320, 450, 50, 50))
+
+    pygame.draw.rect(screen, Color. light_blue, score_rect, 0, 10)
+    pygame.draw.rect(screen, Color.light_blue, next_rect, 0, 10)
     game.draw(screen)
 
     pygame.display.update()
