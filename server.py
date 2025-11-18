@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request
 from weather import get_current_weather
 from waitress import serve
+import subprocess
 
 app=Flask(__name__)
 
@@ -27,6 +28,11 @@ def get_weather():
         temp=f"{weather_data['main']['temp']:.1f}",
         feels_like=f"{weather_data['main']['feels_like']:.1f}"
     )
+
+@app.route('/run-tetris')
+def run_tetris():
+    subprocess.Popen(["python", "SmartTeams/tetris.py"], shell = True)
+    return "Tetris Started!"
 
 if __name__  == "__main__":
     serve(app, host="0.0.0.0", port=8000)
