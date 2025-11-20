@@ -9,9 +9,46 @@
 </head>
 
 <body>
+
+    <div id="Nav">
+        <div id="Logo">
+            <img src="https://www.freeiconspng.com/uploads/building-icon-25.png">
+            <p>Corporations</p>
+        </div>
+
+    </div>
+
+    <div id="menu">
+
+        <div id="Home">
+            <a href="{{ url_for('home') }}" target="_self">
+                Home
+            </a>
+        </div>
+
+        <div id="Selection">
+            <a href="{{ url_for('applications') }}" target="_self">
+                Apps
+            </a>
+        </div>
+
+        <div id="About">
+            <a href="">
+                About
+            </a>
+        </div>
+
+        <div id="Support">
+            <a href="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Question_mark_white.png">
+            </a>
+        </div>
+
+    </div>
     <h1>{{ title }} Weather</h1>
     <p>{{ status }} and {{ temp }} &deg;</p>
     <p>Feels like {{ feels_like }} &deg;</p>
+    <p>Current Humidity {{ humidity }}</p>
 
     <form action="/weather">
         <input type="text" name="city" id="city" placeholder="Enter a City" />
