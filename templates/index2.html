@@ -63,17 +63,17 @@
                 <div class="application application-2">
                     <p>App 2</p>
                 </div>
+
                 <div class="application application-3">
                     <img src="https://cdn.freebiesupply.com/logos/large/2x/nintendo-2-logo-png-transparent.png">
                     <p>Nintendo</p>
                     <p>Nintendo is a japanese multinational video game company</p>
-                    <a href="" target="_self">
-                        <button id="Transfer_button">Nintendo Game</button>
-                    </a>
+                    <button onclick="runTetris()">Nintendo Game</button>
                     <a href="https://www.nintendo.com/" target="_blank">
                         <button id="Transfer_button">Visit Nintendo</button>
                     </a>
                 </div>
+
                 <div class="application application-4">
                     <p>App 4</p>
                 </div>
@@ -85,6 +85,10 @@
         </div>
 
     </div>
+<script>
+    function runTetris() {
+        fetch('/run-tetris')
+    }
+</script>
 </body>
-
 </html>
