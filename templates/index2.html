@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="{{url_for('static', filename='styles/style2.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="background">
+            <div id="Nav">
+                <div id="Logo">
+                    <img src="https://www.freeiconspng.com/uploads/building-icon-25.png">
+                    <p>Corporations</p>
+                </div>
+
+                <div id="menu">
+
+                    <div id="Home">
+                        <a href="{{ url_for('home') }}" target="_self">
+                            Home
+                        </a>
+                    </div>
+
+                    <div id="Selection">
+                        <a href="{{ url_for('applications') }}" target="_self">
+                            Apps
+                        </a>
+                    </div>
+
+                    <div id="About">
+                        <a href="">
+                            About
+                        </a>
+                    </div>
+
+                    <div id="Support">
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Question_mark_white.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="title">
+                <h1>Applications</h1>
+            </div>
+
+            <div id="Container">
+                <div class="application application-1">
+                    <img src="https://play-lh.googleusercontent.com/-8wkZVkXugyyke6sDPUP5xHKQMzK7Ub3ms2EK9Jr00uhf1fiMhLbqX7K9SdoxbAuhQ">
+                    <p> OpenWeatherMap is an online service, that provides global weather data via API, 
+                        including current weather data, forecasts, nowcasts, and historical weather data. </p>
+                    <a href="{{ url_for('weather1') }}" target="_self">
+                        <button id="weather_button">Open Weather App</button>
+                    </a>
+                </div>
+                <div class="application application-2">
+                    <p>App 2</p>
+                </div>
+
+                <div class="application application-3">
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/nintendo-2-logo-png-transparent.png">
+                    <p>Nintendo</p>
+                    <p>Nintendo is a japanese multinational video game company</p>
+                    <button onclick="runTetris()">Nintendo Game</button>
+                    <a href="https://www.nintendo.com/" target="_blank">
+                        <button id="Transfer_button">Visit Nintendo</button>
+                    </a>
+                </div>
+
+                <div class="application application-4">
+                    <p>App 4</p>
+                </div>
+                <div class="application application-5">
+                    <p>App 5</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    function runTetris() {
+        fetch('/run-tetris')
+    }
+</script>
+</body>
+</html>

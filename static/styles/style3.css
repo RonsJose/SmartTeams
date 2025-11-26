@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+    background-color: white;
+    color:rgb(6, 71, 135);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+input, button {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#Logo{
+    display: flex;
+    position: absolute;
+
+    top: 6%;
+    left: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+#Logo p{
+    color: rgb(10, 39, 136);
+    position: relative;
+    left: 10%;
+    font-size: 30px;
+}
+
+#Logo img{
+    width: 70px;
+}
+
+#Nav{
+    display: flex;
+    position: absolute;
+
+    top: 3%;
+    left: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+#Nav p{
+    color: rgb(10, 39, 136);
+    position: relative;
+    left: 10%;
+    font-size: 30px;
+}
+
+#Nav img{
+    width: 70px;
+}
+
+#menu
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    right: 0%;
+    background-color: rgb(10, 39, 136);
+    width: 300px;
+    min-height: 75px;
+}
+
+#menu img
+{
+    width: 30px;
+}
+
+#menu img:hover{
+    cursor: pointer;
+}
+
+#menu a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#Support{
+    padding-left: 20px;
+}

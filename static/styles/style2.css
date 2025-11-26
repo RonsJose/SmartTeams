@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    width: 100%;
+    margin: auto;
+}
+
+.clearfix::after{
+    clear:both;
+    display: block;
+    content:"";
+}
+
+#Nav{
+    position: sticky;
+    top: 0;
+    min-height: 75px;
+}
+
+#Logo{
+    display: flex;
+    position: absolute;
+
+    top: 6%;
+    left: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+#Logo p{
+    color: rgb(10, 39, 136);
+    position: relative;
+    left: 10%;
+    font-size: 30px;
+}
+
+#Logo img{
+    width: 70px;
+}
+
+#menu
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    right: 0%;
+    background-color: rgb(10, 39, 136);
+    width: 300px;
+    min-height: 75px;
+}
+
+#menu img
+{
+    width: 30px;
+}
+
+#menu img:hover{
+    cursor: pointer;
+}
+
+#menu a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#Support{
+    padding-left: 20px;
+}
+
+#Container
+{
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.application
+{
+  position: relative;  
+  width: 300px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  margin: 10px;
+  background-color: rgba(61, 58, 58, 0.5);
+  border-radius: 10px;
+  color: whitesmoke;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+
+.application img
+{
+    margin-top: 10px;
+    width: 200px;
+    padding-bottom: 50px;
+    border-radius: 10%;
+}
+
+#title
+{
+    display: flex;
+    flex-direction:column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    padding-top: 20px;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: white;
+}
+
+#background
+{
+    background-image: url(https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg);
+    background-size: cover;
+    background-position:center;
+    min-height: 1000px;
+    align-items: center;
+    z-index: -1;
+}
+
+#weather_button
+{
+    margin-top: 50px;
+    padding: 15px 30px; 
+    border-radius: 10px;
+    border-color:coral;
+    color: coral;
+    font-weight: bold;
+}
