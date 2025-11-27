@@ -1,6 +1,6 @@
 from tetris_block import Block
 from tetris_position import Position
-#designg for each block shape
+#designg for each block shape in a 3x3 matrix, 4x4 for the I block
 class LBlock(Block):
     def __init__(self):
         super().__init__(id = 1)
