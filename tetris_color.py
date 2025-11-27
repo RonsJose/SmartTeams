@@ -1,4 +1,5 @@
-class Color:    #color for each type of block
+#defining each color and giving it a name for ease of use
+class Color:    
     dark_grey = (26, 32, 40)
     green = (47, 230, 23)
     red = (232, 18, 18)
@@ -11,6 +12,7 @@ class Color:    #color for each type of block
     dark_blue = (44, 44, 127)
     light_blue = (59, 85, 162)
 
+    #returns a list of each color for each tetris piece 
     @classmethod
     def get_cell_colors(cls):
         return [cls.dark_grey, cls.green, cls.red, cls.orange, cls.yellow, cls.purple, cls.cyan, cls.blue]
