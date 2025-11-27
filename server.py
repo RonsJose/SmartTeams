@@ -5,11 +5,7 @@ import subprocess
 from dotenv import load_dotenv
 import os
 import requests
-
-load_dotenv()
-API_KEY=os.getenv("API_KEY")
-
-BASE_URL = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/"
+from currency import currency_get
 
 CURRENCIES = ["USD", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "CNY", "NZD"]
 
@@ -47,29 +43,15 @@ def run_tetris():
 
 @app.route('/currency',methods=["GET", "POST"])
 def currency():
-    result = None
-    converted = None
-    if request.method == "POST":
-        amount = float(request.form["amount"])
-        from_currency = request.form["from_currency"].upper()
-        to_currency = request.form["to_currency"].upper()
+    amount=request.args.get('amount')
+    from_currency=request.args.get('from_currency')
+    to_currency=request.args.get('to_currency')
 
-        response = requests.get(BASE_URL + from_currency)
-        data = response.json()
-
-        if data["result"] != "success":
-            result = "Error fetching rates"
-            converted = None
-        else:
-            rates = data["conversion_rates"]
-            converted = round(amount * rates[to_currency], 2)
-            result = converted
-
+    convereted=currency_get(amount, from_currency, to_currency)
     return render_template(
         "currency.html",
-        result=result,
-        currencies=CURRENCIES,
-        page_title = "Currency Converter - Flask App")
-
+        result=convereted,
+        currencies = CURRENCIES
+    )
 if __name__  == "__main__":
     serve(app, host="0.0.0.0", port=8000)
