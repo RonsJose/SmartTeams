@@ -32,7 +32,7 @@ def get_weather():
 
 @app.route('/run-tetris')
 def run_tetris():
-    subprocess.Popen(["python", "SmartTeams/tetris.py"], shell = True)
+    subprocess.Popen(["python", "tetris.py"], shell = True)
     return "Tetris Started!"
 
 if __name__  == "__main__":
