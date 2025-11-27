@@ -41,11 +41,11 @@ while True:
             if game.game_over == True:
                 game.game_over = False
                 game.reset()
-            if event.key == pygame.K_a and game.game_over == False: #A key move left 
+            if event.key == pygame.K_a or event.key == pygame.K_LEFT and game.game_over == False: #A and left key move left 
                 game.move_left()
-            if event.key == pygame.K_d and game.game_over == False: #D key move right
+            if event.key == pygame.K_d or event.key == pygame.K_RIGHT and game.game_over == False: #D and right key move right
                 game.move_right()
-            if event.key == pygame.K_s and game.game_over == False: #S key move down / earn points
+            if event.key == pygame.K_s or event.key == pygame.K_DOWN and game.game_over == False: #S and down key move down / earn points
                 game.move_down()
                 game.update_score(0, 1)
             if event.key == pygame.K_SPACE and game.game_over == False: #SPACE key rotate block
