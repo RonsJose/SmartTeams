@@ -76,6 +76,15 @@
     padding-left: 20px;
 }
 
+#Container button{
+    z-index: 100;
+    position: relative;
+}
+
+#weather_button:hover{
+    cursor:auto;
+}
+
 #Container
 {
     padding-top: 5%;
@@ -83,6 +92,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
 }
 
 .application
@@ -143,4 +153,29 @@
     border-color:coral;
     color: coral;
     font-weight: bold;
+}
+
+
+#nintendo_button
+{
+    margin-top: 40px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border-color: red;
+    color: red;
+    font-weight: bold;
+}
+
+#nintendo_button:hover{
+cursor: pointer;
+}
+
+#nintendo_img
+{
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    background-color: white;
+    padding: 15px 30px;
+
 }
