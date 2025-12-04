@@ -2,6 +2,7 @@ from flask import Flask, render_template,request
 from weather import get_current_weather
 from waitress import serve
 import subprocess
+import sys
 
 app=Flask(__name__)
 
@@ -37,7 +38,7 @@ def run_tetris():
 
 @app.route('/run-snake')
 def run_snake():
-    subprocess.Popen(["python", "snake.py"],shell = True)
+    subprocess.Popen(["python", "snake.py"], shell=True)
     return "Snake Started"
 
 if __name__  == "__main__":
