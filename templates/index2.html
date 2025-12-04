@@ -82,7 +82,7 @@
                     <p>App 4</p>
                 </div>
                 <div class="application application-5">
-                    <p>App 5</p>
+                    <button id="flappy_bird_button" onclick="runFlappyBird()">Flappy Bird Game</button>
                 </div>
             </div>
 
@@ -92,6 +92,10 @@
     <script>
         function runTetris() {
             fetch('/run-tetris')
+        }
+
+        function runFlappyBird() {
+            fetch('/run-flappy-bird')
         }
     </script>
 </body>
