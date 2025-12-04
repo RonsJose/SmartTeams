@@ -3,6 +3,9 @@ from weather import get_current_weather
 from waitress import serve
 import subprocess
 import sys
+from currency import currency_get
+
+CURRENCIES = ["USD", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "CNY", "NZD"]
 
 app=Flask(__name__)
 
@@ -40,6 +43,21 @@ def run_tetris():
 def run_snake():
     subprocess.Popen(["python", "snake.py"], shell=True)
     return "Snake Started"
+  
+@app.route('/currency',methods=["GET", "POST"])
+def currency():
+    result = None
+    amount = request.args.get('amount')
+    from_currency = request.args.get('from_currency')
+    to_currency = request.args.get('to_currency')
+    
+    result = currency_get(amount, from_currency, to_currency)
+
+    return render_template(
+    "currency.html",
+    result=result,
+    currencies=CURRENCIES,
+    )
 
 if __name__  == "__main__":
     serve(app, host="0.0.0.0", port=8000)
