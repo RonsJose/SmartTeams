@@ -39,6 +39,11 @@ def run_tetris():
     subprocess.Popen(["python", "tetris.py"], shell = True)
     return "Tetris Started!"
 
+@app.route('/run-flappy-bird')
+def run_flappy_bird():
+    subprocess.Popen(["python", "flappy_bird.py"], shell = True)
+    return "Flappy Bird Started!"
+
 @app.route('/run-snake')
 def run_snake():
     subprocess.Popen(["python", "snake.py"], shell=True)

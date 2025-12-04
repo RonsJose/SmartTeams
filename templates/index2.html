@@ -84,7 +84,7 @@
                     <button id="snanke_button" onclick="runSnake()">Snake Game</button>
                 </div>
                 <div class="application application-5">
-                    <p>App 5</p>
+                    <button id="flappy_bird_button" onclick="runFlappyBird()">Flappy Bird Game</button>
                 </div>
             </div>
 
@@ -97,6 +97,9 @@
     }
     function runSnake(){
         fetch('/run-snake')
+    }
+    function runFlappyBird() {
+        fetch('/run-flappy-bird')
     }
 </script>
 </body>
