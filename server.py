@@ -2,9 +2,6 @@ from flask import Flask, render_template,request
 from weather import get_current_weather
 from waitress import serve
 import subprocess
-from dotenv import load_dotenv
-import os
-import requests
 from currency import currency_get
 
 CURRENCIES = ["USD", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "CNY", "NZD"]
@@ -43,15 +40,18 @@ def run_tetris():
 
 @app.route('/currency',methods=["GET", "POST"])
 def currency():
-    amount=request.args.get('amount')
-    from_currency=request.args.get('from_currency')
-    to_currency=request.args.get('to_currency')
+    result = None
+    amount = request.args.get('amount')
+    from_currency = request.args.get('from_currency')
+    to_currency = request.args.get('to_currency')
+    
+    result = currency_get(amount, from_currency, to_currency)
 
-    convereted=currency_get(amount, from_currency, to_currency)
     return render_template(
-        "currency.html",
-        result=convereted,
-        currencies = CURRENCIES
+    "currency.html",
+    result=result,
+    currencies=CURRENCIES,
     )
+
 if __name__  == "__main__":
     serve(app, host="0.0.0.0", port=8000)
