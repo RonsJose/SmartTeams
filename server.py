@@ -35,5 +35,10 @@ def run_tetris():
     subprocess.Popen(["python", "tetris.py"], shell = True)
     return "Tetris Started!"
 
+@app.route('/run-snake')
+def run_snake():
+    subprocess.Popen(["python", "snake.py"],shell = True)
+    return "Snake Started"
+
 if __name__  == "__main__":
     serve(app, host="0.0.0.0", port=8000)
