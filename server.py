@@ -2,6 +2,7 @@ from flask import Flask, render_template,request
 from weather import get_current_weather
 from waitress import serve
 import subprocess
+import sys
 from currency import currency_get
 
 CURRENCIES = ["USD", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "CNY", "NZD"]
@@ -43,6 +44,11 @@ def run_flappy_bird():
     subprocess.Popen(["python", "flappy_bird.py"], shell = True)
     return "Flappy Bird Started!"
 
+@app.route('/run-snake')
+def run_snake():
+    subprocess.Popen(["python", "snake.py"], shell=True)
+    return "Snake Started"
+  
 @app.route('/currency',methods=["GET", "POST"])
 def currency():
     result = None
