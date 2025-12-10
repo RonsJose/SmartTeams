@@ -53,31 +53,38 @@
 
             <div id="Container">
                 <div class="application application-1">
-                    <img src="https://play-lh.googleusercontent.com/-8wkZVkXugyyke6sDPUP5xHKQMzK7Ub3ms2EK9Jr00uhf1fiMhLbqX7K9SdoxbAuhQ">
-                    <p> OpenWeatherMap is an online service, that provides global weather data via API, 
+                    <img
+                        src="https://play-lh.googleusercontent.com/-8wkZVkXugyyke6sDPUP5xHKQMzK7Ub3ms2EK9Jr00uhf1fiMhLbqX7K9SdoxbAuhQ">
+                    <p> OpenWeatherMap is an online service, that provides global weather data via API,
                         including current weather data, forecasts, nowcasts, and historical weather data. </p>
-                    <a href="{{ url_for('weather1') }}" target="_self">
-                        <button id="weather_button">Open Weather App</button>
-                    </a>
+
+                    <button id="weather_button" onclick="window.location.href='{{ url_for('weather1') }}'">Open Weather
+                        App</button>
                 </div>
-                <div class="application application-2">
-                    <p>App 2</p>
+                 <div class="application application-2">
+                    <a href="{{ url_for('currency') }}" target="_self">
+                        <button id="Transfer_button">Open Weather App</button>
+                    </a>
                 </div>
 
                 <div class="application application-3">
-                    <img id="nintendo_img" src="https://cdn.freebiesupply.com/logos/large/2x/nintendo-2-logo-png-transparent.png">
+                    <img id="nintendo_img"
+                        src="https://cdn.freebiesupply.com/logos/large/2x/nintendo-2-logo-png-transparent.png">
                     <p>Nintendo is a japanese multinational video game company</p>
                     <button id="nintendo_button" onclick="runTetris()">Nintendo Game</button>
-                    <a href="https://www.nintendo.com/" target="_blank">
-                        <button id="nintendo_button">Visit Nintendo</button>
-                    </a>
+
+                    <button id="nintendo_button" onclick="window.location.href='https://www.nintendo.com/'">Visit
+                        Nintendo</button>
+
                 </div>
 
                 <div class="application application-4">
-                    <p>App 4</p>
+                    <img id="SnakeGame.jpg" src="https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/Snake_OG-logo.jpg.webp?itok=EOKYMydV">
+                    <p>Chase after the apples but don't hit the wall</p>
+                    <button id="snanke_button" onclick="runSnake()">Snake Game</button>
                 </div>
                 <div class="application application-5">
-                    <p>App 5</p>
+                    <button id="flappy_bird_button" onclick="runFlappyBird()">Flappy Bird Game</button>
                 </div>
             </div>
 
@@ -88,6 +95,13 @@
     function runTetris() {
         fetch('/run-tetris')
     }
+    function runSnake(){
+        fetch('/run-snake')
+    }
+    function runFlappyBird() {
+        fetch('/run-flappy-bird')
+    }
 </script>
 </body>
+
 </html>

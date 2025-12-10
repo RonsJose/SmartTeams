@@ -1,0 +1,99 @@
+/* Global Styles */
+body {
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Hero Container */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Converter Card */
+.converter-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Heading */
+.converter-card h1 {
+  font-size: 2.8rem;
+  color: #9b3a3a;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Inputs and Dropdowns */
+input[type="number"],
+select {
+  width: 80%;
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  display: block;
+  margin: 10px auto;
+  color: #666;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #9b3a3a;
+  box-shadow: 0 0 8px rgba(155, 58, 58, 0.5);
+}
+
+/* Button */
+button {
+  background-color: #9b3a3a;
+  color: #fff;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #7f2f2f;
+  transform: translateY(-2px);
+}
+
+/* Result Display */
+.result {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+  background-color: rgba(155, 58, 58, 0.1);
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .converter-card {
+    padding: 30px 20px;
+  }
+
+  .converter-card h1 {
+    font-size: 2rem;
+  }
+}

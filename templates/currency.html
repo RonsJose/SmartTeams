@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style4.css') }}"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="converter-card">
+        <h1>Currency Converter</h1>
+        <form method="GET" action="/currency">
+          <input
+            type="number"
+            name="amount"
+            step="0.01"
+            placeholder="Amount"
+            required
+          /><br />
+
+          <select name="from_currency" required>
+            <!--Placeholder 'From'-->
+            <option value="" disabled selected>From</option>
+            <!--Loops Through List Of Currency Codes-->
+            {% for code in currencies %}
+            <!--Creates Option For Each Currency-->
+            <option value="{{ code }}">{{ code }}</option>
+            {% endfor %}</select
+          ><br />
+
+          <select name="to_currency" required>
+            <!--Placeholder 'To'-->
+            <option value="" disabled selected>To</option>
+            <!--Loops Through List Of Currency Codes-->
+            {% for code in currencies %}
+            <option value="{{ code }}">{{ code }}</option>
+            {% endfor %}</select
+          ><br />
+
+          <button type="submit">Convert</button>
+        </form>
+
+        <!--Shows Result - If There Is One-->
+        {% if result %}
+        <div class="result">Converted Amount: {{ result }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
