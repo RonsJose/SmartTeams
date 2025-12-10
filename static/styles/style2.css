@@ -20,6 +20,7 @@
     position: sticky;
     top: 0;
     min-height: 75px;
+    z-index: 1000000;
 }
 
 #Logo{
@@ -76,6 +77,15 @@
     padding-left: 20px;
 }
 
+#Container button{
+    z-index: 100;
+    position: relative;
+}
+
+#weather_button:hover{
+    cursor:auto;
+}
+
 #Container
 {
     padding-top: 5%;
@@ -83,6 +93,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
 }
 
 .application
@@ -145,6 +156,7 @@
     font-weight: bold;
 }
 
+
 #nintendo_button
 {
     margin-top: 40px;
@@ -153,6 +165,10 @@
     border-color: red;
     color: red;
     font-weight: bold;
+}
+
+#nintendo_button:hover{
+cursor: pointer;
 }
 
 #nintendo_img
