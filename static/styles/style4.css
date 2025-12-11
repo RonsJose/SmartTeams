@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
   margin: 0;
   background-size: cover;
@@ -7,7 +6,6 @@ body {
   color: #333;
 }
 
-/* Hero Container */
 .hero {
   height: 100vh;
   display: flex;
@@ -16,7 +14,6 @@ body {
   padding: 20px;
 }
 
-/* Converter Card */
 .converter-card {
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 25px;
@@ -27,7 +24,6 @@ body {
   width: 100%;
 }
 
-/* Heading */
 .converter-card h1 {
   font-size: 2.8rem;
   color: #9b3a3a;
@@ -35,7 +31,6 @@ body {
   font-weight: 700;
 }
 
-/* Inputs and Dropdowns */
 input[type="number"],
 select {
   width: 80%;
@@ -55,7 +50,6 @@ select:focus {
   box-shadow: 0 0 8px rgba(155, 58, 58, 0.5);
 }
 
-/* Button */
 button {
   background-color: #9b3a3a;
   color: #fff;
@@ -74,7 +68,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Result Display */
 .result {
   margin-top: 20px;
   font-size: 1.3rem;
@@ -87,7 +80,6 @@ button:hover {
   font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 500px) {
   .converter-card {
     padding: 30px 20px;
