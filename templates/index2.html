@@ -63,7 +63,7 @@
                 </div>
                  <div class="application application-2">
                     <a href="{{ url_for('currency') }}" target="_self">
-                        <button id="Transfer_button">Open Weather App</button>
+                        <button id="currency_button">Open Currency App</button>
                     </a>
                 </div>
 
@@ -79,24 +79,32 @@
                 </div>
 
                 <div class="application application-4">
-                    <p>App 4</p>
+                    <img id="SnakeGame.jpg" src="https://www.coolmathgames.com/sites/default/files/styles/mobile_game_image/public/Snake_OG-logo.jpg.webp?itok=EOKYMydV">
+                    <p>Chase after the apples but don't hit the wall</p>
+                    <button id="snanke_button" onclick="runSnake()">Snake Game</button>
                 </div>
                 <div class="application application-5">
                  <img id="flappy-bird-2024-header"
                 src="https://iphonesoft.fr/images/2024/09/flappy-bird-2024-header.jpg">
                 <p> Flappy Bird is a game where a bird tries to fly through the gaps in pipes</p>
-                <button id="Flappy_button" onclick="runFlappy()">Flappy  Bird </button>
+                   <button id="flappy_bird_button" onclick="runFlappyBird()">Flappy Bird Game</button>
                 </div>
             </div>
 
         </div>
 
     </div>
-    <script>
-        function runTetris() {
-            fetch('/run-tetris')
-        }
-    </script>
+<script>
+    function runTetris() {
+        fetch('/run-tetris')
+    }
+    function runSnake(){
+        fetch('/run-snake')
+    }
+    function runFlappyBird() {
+        fetch('/run-flappy-bird')
+    }
+</script>
 </body>
 
 </html>
