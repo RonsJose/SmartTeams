@@ -180,3 +180,24 @@ cursor: pointer;
     padding: 15px 30px;
 
 }
+
+#currency_button {
+    background-color: #f1c74a;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.currency_btn:hover {
+    background-color: #e6b938;
+    transform: translateY(-2px);
+}
+
+.currency_btn:active {
+    transform: scale(0.95);
+}
