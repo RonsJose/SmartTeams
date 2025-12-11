@@ -22,19 +22,14 @@
           /><br />
 
           <select name="from_currency" required>
-            <!--Placeholder 'From'-->
             <option value="" disabled selected>From</option>
-            <!--Loops Through List Of Currency Codes-->
             {% for code in currencies %}
-            <!--Creates Option For Each Currency-->
             <option value="{{ code }}">{{ code }}</option>
             {% endfor %}</select
           ><br />
 
           <select name="to_currency" required>
-            <!--Placeholder 'To'-->
             <option value="" disabled selected>To</option>
-            <!--Loops Through List Of Currency Codes-->
             {% for code in currencies %}
             <option value="{{ code }}">{{ code }}</option>
             {% endfor %}</select
@@ -43,7 +38,6 @@
           <button type="submit">Convert</button>
         </form>
 
-        <!--Shows Result - If There Is One-->
         {% if result %}
         <div class="result">Converted Amount: {{ result }}</div>
         {% endif %}
