@@ -10,16 +10,16 @@ The project is a multi-page web application that integrates external APIs and br
 <img width="1893" height="947" alt="image" src="https://github.com/user-attachments/assets/9265c567-0682-46d1-9dcb-1fa8c6ba5b13" />
 
 # Features:
-## Weather Application:
-* Fetches real-time weather data using an external API
-* Allows users to search weather by location
-## Currency Converter:
-* Uses a currency exchange API
-* Converts between multiple currencies in real time
-## Built in Games:
-* Tetris
-* Snake
-* Flappy Bird
+* ## Weather Application:
+  * Fetches real-time weather data using an external API
+  * Allows users to search weather by location
+* ## Currency Converter:
+  * Uses a currency exchange API
+  * Converts between multiple currencies in real time
+* ## Built in Games:
+  * Tetris
+  * Snake
+  * Flappy Bird
 
 # Tech Stack:
 * Python
